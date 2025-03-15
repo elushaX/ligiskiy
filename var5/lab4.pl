@@ -1,6 +1,6 @@
 % Читаем строку из ввода
 read_sentence(Sentence) :-
-    write('Введите предложение: '),
+    write('Enter sentence: '),
     read_line_to_string(user_input, Sentence).
 
 % Разбиваем предложение на список слов
@@ -20,8 +20,8 @@ asd :-
     read_sentence(Sentence),
     split_sentence(Sentence, Words),
     (   trim_sentence(Words, Trimmed)
-    ->  write('Результат: '), write(Trimmed), nl, !
-    ;   write('Ошибка: в предложении должно быть больше 2 слов!'), nl, fail
+    ->  write('Result: '), write(Trimmed), nl, !
+    ;   write('Error: sentence must have more than two words!'), nl, fail
     ).
 
 %:- initialization(main).

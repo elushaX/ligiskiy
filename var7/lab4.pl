@@ -14,8 +14,8 @@ words :-
     repeat,
     read_word(Word),
     (   trim_word(Word, Trimmed)
-    ->  write('Результат: '), write(Trimmed), nl, !
-    ;   write('Ошибка: слово должно быть длиннее 2 символов!'), nl, fail
+    ->  write('Result: '), write(Trimmed), nl, !
+    ;   write('error: word must be longer than two letters!'), nl, fail
     ).
 
 %:- initialization(main).
